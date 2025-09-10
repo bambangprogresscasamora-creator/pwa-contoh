@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aplikasi PWA Contoh</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f172a">
+
+  <style>
+    body {
+      margin:0; padding:20px;
+      font-family:sans-serif;
+      background:#0f172a; color:#fff;
+      text-align:center;
+    }
+    button {
+      padding:10px 20px; border:none; border-radius:6px;
+      background:#22c55e; color:white; font-size:16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Halo Bos 👋</h1>
+  <p>Ini contoh aplikasi HTML + JS jadi PWA.</p>
+  <button onclick="alert('Tombol jalan di PWA!')">Klik Saya</button>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
